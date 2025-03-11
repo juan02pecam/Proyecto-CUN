@@ -1,1 +1,13 @@
+h1{
+    background-color: antiquewhite;
+}
 
+.redes{
+    width: 200px;
+    height: 200px;
+}
+
+.final{
+    align-items: center;
+    display: flex;
+}
