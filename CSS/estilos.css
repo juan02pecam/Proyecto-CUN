@@ -1,13 +1,25 @@
 h1{
+    margin: 0 auto;
+    padding: 0 auto;
     background-color: antiquewhite;
+    text-align: center;
 }
 
-.redes{
-    width: 200px;
-    height: 200px;
+#redes{
+    width: 30px;
+    background-color: white;
 }
 
-.final{
-    align-items: center;
+.name, .description{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
     display: flex;
+}
+
+body{
+    background-image: url(https://media.istockphoto.com/id/1716334851/photo/purple-lit-keyboard-amidst-various-wireless-devices.jpg?s=2048x2048&w=is&k=20&c=0DPm2W23goZzmBQ48cifq-bxQS2i9ROloU6mzr3Q-mQ=) ;
+    color: white;
 }
