@@ -1,17 +1,39 @@
+body{
+    background-image: url(https://media.istockphoto.com/id/1716334851/photo/purple-lit-keyboard-amidst-various-wireless-devices.jpg?s=2048x2048&w=is&k=20&c=0DPm2W23goZzmBQ48cifq-bxQS2i9ROloU6mzr3Q-mQ=) ;
+    color: #dfdfe2; 
+}
+
+.list-one{
+    display: flex;
+    justify-content: space-evenly; /*Organiza todos los elementos de la lista en linea*/
+    align-items: center;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+li > a{
+    text-decoration: none; /*Quita la linea del enlace*/
+    color: white;
+}
+
+nav>ul>li:hover{
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+}
+
+nav > ul > li {  /*Quita las biñetas de la lista desordenada*/
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+}
+
 h1{
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 5px 5px;
+    padding: 15px ;
     background-color: antiquewhite;
-    text-align: center;
-}
-
-#redes{
-    width: 30px;
-    background-color: white;
-}
-
-.name, .description{
-    text-align: center;
+    text-align: center;  
 }
 
 footer{
@@ -19,7 +41,11 @@ footer{
     display: flex;
 }
 
-body{
-    background-image: url(https://media.istockphoto.com/id/1716334851/photo/purple-lit-keyboard-amidst-various-wireless-devices.jpg?s=2048x2048&w=is&k=20&c=0DPm2W23goZzmBQ48cifq-bxQS2i9ROloU6mzr3Q-mQ=) ;
-    color: white;
+.name, .description{
+    text-align: center;
+}
+
+#redes{
+    width: 30px;
+    background-color: white;
 }
