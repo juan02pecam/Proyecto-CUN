@@ -31,9 +31,27 @@ nav > ul > li {  /*Quita las biñetas de la lista desordenada*/
 
 h1{
     margin: 5px 5px;
-    padding: 15px ;
-    background-color: antiquewhite;
+    padding: 5px;
     text-align: center;  
+    color: white;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid black;
+}
+
+div > p{
+    color: white;
+    text-align: center;
+}
+
+a{
+    
+    text-align: center;
+    color: white;
+    text-decoration: none;
 }
 
 footer{
