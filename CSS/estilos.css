@@ -47,23 +47,42 @@ div > p{
     text-align: center;
 }
 
-a{
-    
+div{
     text-align: center;
-    color: white;
+}
+
+#information{
+    color: greenyellow;
     text-decoration: none;
 }
 
+#information:visited{
+    color: cyan;
+}
+
+#producs{
+    align-items: center;
+    display: inline;
+    min-height: 250px;
+    min-width: 250px;
+    max-width: 500px;
+    max-height: 500px;
+}
+
 footer{
+
     text-align: center;
     display: flex;
+    background-color: black;
 }
 
 .name, .description{
     text-align: center;
+    display: block;
 }
 
 #redes{
+    display: block;
     width: 30px;
     background-color: white;
 }
