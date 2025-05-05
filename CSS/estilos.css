@@ -70,9 +70,8 @@ div{
 }
 
 footer{
-
     text-align: center;
-    display: flex;
+    align-items:center ;
     background-color: black;
 }
 
