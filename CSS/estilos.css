@@ -3,6 +3,20 @@ body{
     color: #dfdfe2; 
 }
 
+/*NAV*/
+
+#carrito{
+    position: relative;
+    position:left;
+    width: 50px;
+    height: 50px;
+
+}
+
+#imag{
+    width: 30px;
+}
+
 .list-one{
     display: flex;
     justify-content: space-evenly; /*Organiza todos los elementos de la lista en linea*/
@@ -28,6 +42,8 @@ nav > ul > li {  /*Quita las biñetas de la lista desordenada*/
     padding: 0.2rem;
     display: block;
 }
+
+/*MAIN*/
 
 h1{
     margin: 5px 5px;
@@ -69,10 +85,11 @@ div{
     max-height: 500px;
 }
 
+/*FOOTER*/
+
 footer{
     text-align: center;
     align-items:center ;
-    background-color: black;
 }
 
 .name, .description{
@@ -81,7 +98,7 @@ footer{
 }
 
 #redes{
-    display: block;
+    position: relative;
     width: 30px;
     background-color: white;
 }

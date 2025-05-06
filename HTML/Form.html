@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Formulario de Contacto</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            // Obtener los valores de los campos
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Verificar que los campos no estén vacíos
+            if (name === "" || email === "" || message === "") {
+                alert("Todos los campos deben ser completados.");
+                return false; // Evita el envío del formulario
+            }
+
+            // Validar el formato del correo electrónico
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!email.match(emailPattern)) {
+                alert("Por favor, ingrese un correo electrónico válido.");
+                return false; // Evita el envío del formulario
+            }
+
+            // Si todo es correcto, se puede enviar el formulario
+            alert("Formulario enviado correctamente.");
+            return true;
+        }
+    </script>
+</body>
+</html>

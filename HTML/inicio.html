@@ -14,26 +14,30 @@
             <header>
                 <nav>
                     <ul class="list-one">
-                        <li><a href="">Inicio</a></li>
-                        <li><a href="">Acerca de nosotros</a></li>
-                        <li><a href="">Redes sociales</a></li>
+                        <li><a href="inicio.html">Inicio</a></li>
+                        <li><a href="#information">Acerca de nosotros</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#redes">Redes sociales</a></li>
                     </ul>
+                    <button id="inicio-sesion"><p>iniciar sesion</p></button>
+                    <button id="carrito"><img id="imag" src="/Imagenes/carro-de-compras-rapido.png" alt="carrito de compras"></button>
                 </nav>
             <header>
         </fieldset>    
         <main>
-            <fieldset><h1>Tecno Pits</h1></fieldset>
-            <div class="information">
+            <fieldset></fieldset>
+            <div id="information">
+                <h1>Tecno Pits</h1>
                 <p>
                     El espacio en blanco es cualquier cadena de texto compuesta solo por espacios, tabulaciones o saltos de línea (para ser precisos, 
                     secuencias CRLF, retornos de carro o avances de línea). Estos caracteres te permiten formatear tu código de una manera que lo hará fácilmente 
                     legible por ti y otras personas. De hecho, gran parte de nuestro código fuente está lleno de estos caracteres de espacio en blanco, y solo 
                     tendemos a deshacernos de ellos en un paso de compilación de producción para reducir el tamaño de descarga del código
                 </p>
-                <h3><a id="information" href="https://clonesyperifericos.com/tienda/teclados-para-gaming/?srsltid=AfmBOoqIYmJvQGhQSo_KO2_hfdImmjjH5IR_Kp3_f1NEo9gNeMg4Y7pG">Informacion</a></h3><!--Esta es la informacion-->
+                <h3><a href="https://clonesyperifericos.com/tienda/teclados-para-gaming/?srsltid=AfmBOoqIYmJvQGhQSo_KO2_hfdImmjjH5IR_Kp3_f1NEo9gNeMg4Y7pG">Informacion</a></h3><!--Esta es la informacion-->
             </div>
 
-            <div>
+            <div id="products">
                 <h2>Produtos</h2>
                 <p>Son productos con los que se cuentan</p>
                 <img id="producs" src="https://res-3.cloudinary.com/grover/image/upload/v1591972475/k8oanfgbritqfaw84k5u.png" alt="Imagen del producto1">
@@ -60,50 +64,11 @@
             </span>
         </footer>
 
-        <h2>Formulario de Contacto</h2>
-    <form id="contactForm" onsubmit="return validateForm()">
-        <label for="name">Nombre:</label><br>
-        <input type="text" id="name" name="name"><br><br>
+        <button><a href="/HTML/Form.html">Sugerencias</a></button>
 
-        <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email"><br><br>
-
-        <label for="message">Mensaje:</label><br>
-        <textarea id="message" name="message"></textarea><br><br>
-
-        <button type="submit">Enviar</button>
-    </form>
-
-    <script>
-        function validateForm() {
-            // Obtener los valores de los campos
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            // Verificar que los campos no estén vacíos
-            if (name === "" || email === "" || message === "") {
-                alert("Todos los campos deben ser completados.");
-                return false; // Evita el envío del formulario
-            }
-
-            // Validar el formato del correo electrónico
-            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!email.match(emailPattern)) {
-                alert("Por favor, ingrese un correo electrónico válido.");
-                return false; // Evita el envío del formulario
-            }
-
-            // Si todo es correcto, se puede enviar el formulario
-            alert("Formulario enviado correctamente.");
-            return true;
-        }
-    </script>
     </body>
 
-
-
-    </html>
+</html>
 
 <!--El espacio en blanco es cualquier cadena de texto compuesta solo por espacios, tabulaciones o saltos de línea (para ser precisos, 
 secuencias CRLF, retornos de carro o avances de línea). Estos caracteres te permiten formatear tu código de una manera que lo hará fácilmente 
