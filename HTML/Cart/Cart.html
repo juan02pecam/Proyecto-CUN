@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscompras de P-O</title>
+    <link rel="stylesheet" href="/CSS/CSS Cart/CssCart.css">
+</head>
+<body>
+
+    <div class="hamburguesa" id="boton-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  
+    <nav id="menu">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Contacto</a>
+    </nav>
+  
+    <script>
+      const botonMenu = document.getElementById('boton-menu');
+      const menu = document.getElementById('menu');
+  
+      botonMenu.addEventListener('click', () => {
+        menu.classList.toggle('mostrar');
+      });
+    </script>
+  
+  </body>
+</html>

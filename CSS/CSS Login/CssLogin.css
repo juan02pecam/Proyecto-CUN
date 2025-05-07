@@ -1,0 +1,58 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+
+  /* Contenedor del botón hamburguesa */
+  .hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+  }
+
+  .hamburguesa span {
+    background: #333;
+    height: 4px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+
+  /* Menú de navegación */
+  nav {
+    background: #f2f2f2;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+  }
+
+  /* Mostrar elementos en pantallas pequeñas */
+  @media (max-width: 2080px) {
+    .hamburguesa {
+      display: flex;
+    }
+
+    nav.mostrar {
+      display: flex;
+    }
+  }
+
+  /* En pantallas grandes, el menú está siempre visible */
+  @media (min-width: 2080px) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .hamburguesa {
+      display: none;
+    }
+  }
