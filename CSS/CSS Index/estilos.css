@@ -4,14 +4,31 @@ body{
     font-size: 20px;
 }
 
+button a{
+    text-decoration: none;
+    color: black;
+}
+
 /*NAV*/
 
 #carrito{
     position: relative;
-    width: 50px;
     height: 50px;
-
+    width: 50px;
+    position: absolute;
+    right: 1%;
+    top: 10px;
 }
+
+#inicio-sesion{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    right: 5%;
+    top: 10px;
+}
+
 
 #imag{
     width: 30px;
