@@ -12,7 +12,14 @@
     <body>
         <fieldset>
             <header>
-                <nav>
+
+                <div class="hamburguesa" id="boton-menu"> <!--Hamburguesa-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav id="menu">
                     <ul class="list-one">
                         <li><a href="inicio.html">Inicio</a></li>
                         <li><a href="#information">Acerca de nosotros</a></li>
@@ -66,6 +73,18 @@
         </footer>
 
         <button><a href="/HTML/Form/Form.html">Sugerencias</a></button>
+
+
+
+<!--Script-->
+    <script>
+        const botonMenu = document.getElementById('boton-menu');
+        const menu = document.getElementById('menu');
+
+        botonMenu.addEventListener('click', () => {
+        menu.classList.toggle('mostrar');
+        });
+  </script>
 
     </body>
 
