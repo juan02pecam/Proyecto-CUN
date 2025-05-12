@@ -1,7 +1,13 @@
+:root{
+    --button-desing: cyan;
+    --button-desing2: white;
+}
+
 body{
-    background-image: url(https://media.istockphoto.com/id/1716334851/photo/purple-lit-keyboard-amidst-various-wireless-devices.jpg?s=2048x2048&w=is&k=20&c=0DPm2W23goZzmBQ48cifq-bxQS2i9ROloU6mzr3Q-mQ=) ;
+    background-image: url(https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     color: #dfdfe2; 
-    font-size: 20px;
+    font-size: 30px;
+
 /*---------------------------------------------------------*/
     font-family: sans-serif;
     margin: 0;
@@ -30,7 +36,6 @@ button a{
 }
 
 nav {
-    background: black ;
     padding: 15px;
     display: none;
     flex-direction: column;
@@ -70,21 +75,30 @@ nav>ul>li>a{
 /*NAV*/
 
 #carrito{
-    position: relative;
     height: 50px;
     width: 50px;
     position: absolute;
     right: 1%;
     top: 10px;
+    background: linear-gradient(
+        var(--button-desing),
+        var(--button-desing2)
+    );
+    border-color: var(--button-desing);
 }
 
 #inicio-sesion{
-    position: relative;
     height: 50px;
     width: 100px;
     position: absolute;
     right: 5%;
     top: 10px;
+    background: linear-gradient(
+        var(--button-desing),
+        var(--button-desing2)
+    );
+    border-color: var(--button-desing);
+
 }
 
 
@@ -160,11 +174,20 @@ div{
     max-height: 500px;
 }
 
+#infor{
+    text-decoration: none;
+    color: var(--button-desing);
+}
+
+#infor:hover{
+    color: var(--button-desing2);
+}
+
+
 /*FOOTER*/
 
 footer{
     text-align: center;
-    align-items:center ;
 }
 
 .name, .description{
@@ -176,4 +199,18 @@ footer{
     position: relative;
     width: 30px;
     background-color: white;
+}
+
+#sug{
+    position: absolute;
+    display: block;
+    height: 50px;
+    width: 100px;
+    right: 50%;
+    left: auto;
+    background: linear-gradient(
+        var(--button-desing),
+        var(--button-desing2)
+    );
+    border-color: var(--button-desing);
 }

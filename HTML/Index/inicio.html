@@ -41,7 +41,7 @@
                         legible por ti y otras personas. De hecho, gran parte de nuestro código fuente está lleno de estos caracteres de espacio en blanco, y solo 
                         tendemos a deshacernos de ellos en un paso de compilación de producción para reducir el tamaño de descarga del código
                     </p>
-                    <h3><a href="https://clonesyperifericos.com/tienda/teclados-para-gaming/?srsltid=AfmBOoqIYmJvQGhQSo_KO2_hfdImmjjH5IR_Kp3_f1NEo9gNeMg4Y7pG">Informacion</a></h3><!--Esta es la informacion-->
+                    <h3><a id="infor" href="https://clonesyperifericos.com/tienda/teclados-para-gaming/?srsltid=AfmBOoqIYmJvQGhQSo_KO2_hfdImmjjH5IR_Kp3_f1NEo9gNeMg4Y7pG">Informacion</a></h3><!--Esta es la informacion-->
                 </div>
             </fieldset>
 
@@ -72,19 +72,19 @@
             </span>
         </footer>
 
-        <button><a href="/HTML/Form/Form.html">Sugerencias</a></button>
+        <button  id="sug"><a href="/HTML/Form/Form.html">Sugerencias</a></button>
 
 
 
-<!--Script-->
-    <script>
-        const botonMenu = document.getElementById('boton-menu');
-        const menu = document.getElementById('menu');
+        <!--Script-->
+        <script>
+            const botonMenu = document.getElementById('boton-menu');
+            const menu = document.getElementById('menu');
 
-        botonMenu.addEventListener('click', () => {
-        menu.classList.toggle('mostrar');
-        });
-  </script>
+            botonMenu.addEventListener('click', () => {
+            menu.classList.toggle('mostrar');
+            });
+        </script>
 
     </body>
 

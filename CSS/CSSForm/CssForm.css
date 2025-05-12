@@ -1,0 +1,89 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url(https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    color: white;
+  }
+
+  /* Contenedor del botón hamburguesa */
+  .hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+  }
+
+  .hamburguesa span {
+    background: white;
+    height: 4px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+
+  /* Menú de navegación */
+  nav {
+    background: #f2f2f2;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+  }
+
+  /* Mostrar elementos en pantallas pequeñas */
+  @media (max-width: 2080px) {
+    .hamburguesa {
+      display: flex;
+    }
+
+    nav.mostrar {
+      display: flex;
+    }
+  }
+
+  /* En pantallas grandes, el menú está siempre visible */
+  @media (min-width: 2080px) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .hamburguesa {
+      display: none;
+    }
+  }
+
+  /*--------------------------------------------*/
+
+  main{
+  text-align: center;
+}
+
+footer{
+    text-align: center;
+}
+
+.name, .description{
+    text-align: center;
+    display: block;
+}
+
+#redes{
+    position: relative;
+    width: 30px;
+    background-color: white;
+}
+
+button{
+  background: linear-gradient(
+    cyan,
+    white
+  );
+  height: 50px;
+}

@@ -4,23 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sugerencias</title>
+    <link rel="stylesheet" href="/CSS/CSSForm/CssForm.css">
 </head>
 <body>
-    <nav></nav>
-    <h2>Formulario de Sugerencias</h2>
-    <form id="contactForm" onsubmit="return validateForm()">
-        <label for="name">Nombre:</label><br>
-        <input type="text" id="name" name="name"><br><br>
 
-        <label for="email">Correo electrónico:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+    <div class="hamburguesa" id="boton-menu"> <!--Este es div es para el menú hamburguesa-->
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-        <label for="message">Mensaje:</label><br>
-        <textarea id="message" name="message"></textarea><br><br>
+    <nav id="menu">
+        <a href="/HTML/Index/inicio.html">Inicio</a> <!--Lo que contiene el menú-->
+    </nav>
 
-        <button type="submit">Enviar</button>
-    </form>
+    <main>
+        <h2>Formulario de Sugerencias</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name"><br><br>
 
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p class="name">Juan David Peña Camacho</p> <br>
+            
+        <p class="description">Programacion web</p>
+        
+        <span class="final">
+                
+            <a href="https://www.facebook.com/juandavid.penacamacho.1/"><img src="/Imagenes/facebook.png" alt="facebook" id="redes"></a>
+            <a href="https://wa.me/qr/TYHGCT6KPELQH1"><img src="/Imagenes/whatsapp.png" alt="whatsapp" id="redes"></a>
+            <a href="https://x.com/juandavidpecam5"><img src="/Imagenes/X.png" alt="X" id="redes"></a>
+            
+        </span>
+    </footer>
+    
+<!--Form-->
     <script>
         function validateForm() {
             // Obtener los valores de los campos
@@ -46,5 +74,16 @@
             return true;
         }
     </script>
+
+<!--Hamburguesa-->
+    <script>
+        const botonMenu = document.getElementById('boton-menu');
+        const menu = document.getElementById('menu');
+
+        botonMenu.addEventListener('click', () => {
+        menu.classList.toggle('mostrar');
+        });
+    </script>
+
 </body>
 </html>
