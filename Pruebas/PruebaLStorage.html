@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login con Local Storage</title>
+    </head>
+    <body>
+        <h2>Registro</h2>
+        <form onsubmit="registrarUsuario(event)">
+            <input type="text" id="registroUsuario" placeholder="Usuario" required>
+            <input type="password" id="registroPassword" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+
+        <h2>Iniciar Sesión</h2>
+        <form onsubmit="iniciarSesion(event)">
+            <input type="text" id="loginUsuario" placeholder="Usuario" required>
+            <input type="password" id="loginPassword" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+
+        <p id="mensaje"></p>
+
+        <script>
+            function registrarUsuario(event) {
+                event.preventDefault();
+                const usuario = document.getElementById('registroUsuario').value;
+                const password = document.getElementById('registroPassword').value;
+
+                // Guardar en Local Storage
+                localStorage.setItem('usuario', usuario);
+                localStorage.setItem('password', password); // ¡No recomendado en producción!
+
+                document.getElementById('mensaje').textContent = 'Usuario registrado correctamente.';
+            }
+
+            function iniciarSesion(event) {
+                event.preventDefault();
+                const usuarioIngresado = document.getElementById('loginUsuario').value;
+                const passwordIngresado = document.getElementById('loginPassword').value;
+
+                const usuarioGuardado = localStorage.getItem('usuario');
+                const passwordGuardado = localStorage.getItem('password');
+
+                if (usuarioIngresado === usuarioGuardado && passwordIngresado === passwordGuardado) {
+                    document.getElementById('mensaje').textContent = `Bienvenido, ${usuarioIngresado}!`;
+                } else {
+                    document.getElementById('mensaje').textContent = 'Usuario o contraseña incorrectos.';
+                }
+            }
+        </script>
+    </body>
+</html>

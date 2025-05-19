@@ -20,7 +20,7 @@
 
     <main>
         <h2>Formulario de Sugerencias</h2>
-        <form id="contactForm" onsubmit="return validateForm()">
+        <form id="sugeForm" onsubmit="return validateForm()">
             <label for="name">Nombre:</label><br>
             <input type="text" id="name" name="name"><br><br>
 
@@ -50,7 +50,9 @@
     
 <!--Form-->
     <script>
+
         function validateForm() {
+
             // Obtener los valores de los campos
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
@@ -70,13 +72,9 @@
             }
 
             // Si todo es correcto, se puede enviar el formulario
-            //alert("Formulario enviado correctamente.");
-            //return true;
-            
-            if (localStorage.getItem("loggedIn") !== "true") {
-                alert("Formulario enviado correctamente");
-                window.location.href= "HTML/Index/inicio.html";
-            }
+            alert("Formulario enviado correctamente.");
+            window.location.href = "/HTML/Index/inicio.html";
+            return false;
         }
     </script>
 
