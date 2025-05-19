@@ -21,7 +21,9 @@
     <main>
       <h1>Tus compras</h1>
     </main>
-  
+
+
+    <!--Script de hamburguesa-->
     <script>
       const botonMenu = document.getElementById('boton-menu');
       const menu = document.getElementById('menu');
@@ -29,6 +31,40 @@
       botonMenu.addEventListener('click', () => {
         menu.classList.toggle('mostrar');
       });
+    </script> 
+
+    <!--Requiere primero el correo-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem("loggedIn") !== "true") {
+                alert("Debes iniciar sesión para ver el carrito.");
+                window.location.href = "../Login/Login.html";
+            }
+
+            mostrarCarrito();
+        });
+
+        /*function agregarAlCarrito(nombre, precio) {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.push({ nombre, precio });
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            mostrarCarrito();
+        }
+
+        function mostrarCarrito() {
+            const lista = document.getElementById("listaCarrito");
+            const total = document.getElementById("total");
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            lista.innerHTML = "";
+            let suma = 0;
+            carrito.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.nombre} - $${item.precio}`;
+                lista.appendChild(li);
+                suma += item.precio;
+            });
+            total.textContent = "Total: $" + suma;
+        }*/
     </script>
   
   </body>

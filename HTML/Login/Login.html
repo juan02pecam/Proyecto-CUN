@@ -18,18 +18,42 @@
         <a href="/HTML/Index/inicio.html">Inicio</a> <!--Lo que contiene el menú-->
     </nav>
 
+      
     <main>
-        <h2>Iniciar sesion</h2>
-        
-        <form id="loginForm" onsubmit="return validateForm()">
-            <label for="email">Correo electronico:</label><br>
-            <input type="email" name="email" id="email"><br><br>
+        <div>
+            <fieldset>
+                <h2>Iniciar sesion</h2>
 
-            <label for="password">Contraseña</label><br>
-            <input type="password" name="password" id="password" ><br><br>
+                <form id="loginForm" onsubmit="return validateForm()">
+                    <label for="email">Correo electronico:</label><br>
+                    <input type="email" name="email" id="email" placeholder="Email@gmail.com"><br><br>
 
-            <button type="submit">Ingresar</button>
-        </form>
+                    <label for="password">Contraseña</label><br>
+                    <input type="password" name="password" id="password" placeholder="password"><br><br>
+
+                    <button type="submit">Ingresar</button>
+                </form>
+
+            </fieldset>
+        </div>
+
+        <p>Si no te has registrado lo podras hacer aca</p>
+
+        <div>
+            <fieldset>
+                
+                <h2>Registro</h2>
+                <form id="RegisLogin">
+                    <label for="email">Correo electronico:</label><br>
+                    <input type="email" name="email" id="email" placeholder="Email@gmail.com"><br><br>
+
+                    <label for="password">Contraseña</label><br>
+                    <input type="password" name="password" id="password" placeholder="password"><br><br>
+
+                    <button type="submit">Registrarte</button>
+                </form>
+            </fieldset>
+        </div>
     </main>
 
     <footer>
@@ -45,7 +69,9 @@
             
         </span>
     </footer>
-    
+
+
+    <!--Este es el JS del login "Iniciar sesion"-->
     <script>
         function validateForm(){
 
@@ -69,6 +95,8 @@
         }
     </script>
 
+
+    <!--Menu hamburguesa-->
     <script>
         const botonMenu = document.getElementById('boton-menu');
         const menu = document.getElementById('menu');

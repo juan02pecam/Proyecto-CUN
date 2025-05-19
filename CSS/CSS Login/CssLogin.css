@@ -3,6 +3,7 @@ body {
     margin: 0;
     background-image: url(https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     color: white;
+    font-size: 20px;
   }
 
   /* Contenedor del botón hamburguesa */
@@ -64,19 +65,25 @@ main{
   text-align: center;
 }
 
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid white;
+}
+
 footer{
-    text-align: center;
+  text-align: center;
 }
 
 .name, .description{
-    text-align: center;
-    display: block;
+  text-align: center;
+  display: block;
 }
 
 #redes{
-    position: relative;
-    width: 30px;
-    background-color: white;
+  position: relative;
+  width: 30px;
+  background-color: white;
 }
 
 button{

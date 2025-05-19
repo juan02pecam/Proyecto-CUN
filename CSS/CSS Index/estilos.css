@@ -125,7 +125,7 @@ nav>ul>li:hover{
     cursor: pointer;
 }
 
-nav > ul > li {  /*Quita las biñetas de la lista desordenada*/
+nav > fieldset >ul > li {  /*Quita las biñetas de la lista desordenada*/
     color: #dfdfe2;
     margin: 0 0.2rem;
     padding: 0.2rem;
@@ -157,7 +157,7 @@ div{
 }
 
 #information{
-    color: greenyellow;
+    color: white;
     text-decoration: none;
 }
 

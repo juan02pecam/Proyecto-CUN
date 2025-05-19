@@ -10,30 +10,32 @@
     </head>
 
     <body>
-        <fieldset>
-            <header>
+        
+        <div class="hamburguesa" id="boton-menu"> <!--Hamburguesa-->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-                <div class="hamburguesa" id="boton-menu"> <!--Hamburguesa-->
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <nav id="menu">
-                    <ul class="list-one">
-                        <li><a href="inicio.html">Inicio</a></li>
-                        <li><a href="#information">Acerca de nosotros</a></li>
-                        <li><a href="#products">Productos</a></li>
-                        <li><a href="#redes">Redes sociales</a></li>
-                    </ul>
-                    <button id="inicio-sesion"><a href="/HTML/Login/Login.html"><p>iniciar sesion</p></a></button>
-                    <button id="carrito"><a href="/HTML/Cart/Cart.html"><img id="imag" src="/Imagenes/carro-de-compras-rapido.png" alt="carrito de compras"></a></button>
-                </nav>
-            <header>
-        </fieldset>    
-        <main>
+        <nav id="menu">
             <fieldset>
-                <div id="information">
+                <ul class="list-one">
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="#information">Acerca de nosotros</a></li>
+                    <li><a href="#products">Productos</a></li>
+                    <li><a href="#redes">Redes sociales</a></li>
+                </ul>
+                
+                <button id="inicio-sesion"><a href="/HTML/Login/Login.html"><p>iniciar sesion</p></a></button>
+
+                <button id="carrito"><a href="/HTML/Cart/Cart.html"><img id="imag" src="/Imagenes/carro-de-compras-rapido.png" alt="carrito de compras"></a></button>
+            </fieldset>
+        </nav>
+            
+            
+        <main>
+            <div id="information">
+                <fieldset>
                     <h1>Tecno Pits</h1>
                     <p>
                         El espacio en blanco es cualquier cadena de texto compuesta solo por espacios, tabulaciones o saltos de línea (para ser precisos, 
@@ -42,8 +44,9 @@
                         tendemos a deshacernos de ellos en un paso de compilación de producción para reducir el tamaño de descarga del código
                     </p>
                     <h3><a id="infor" href="https://clonesyperifericos.com/tienda/teclados-para-gaming/?srsltid=AfmBOoqIYmJvQGhQSo_KO2_hfdImmjjH5IR_Kp3_f1NEo9gNeMg4Y7pG">Informacion</a></h3><!--Esta es la informacion-->
-                </div>
-            </fieldset>
+                </fieldset>
+            </div>
+            
 
             <div id="products">
                 <h2>Produtos</h2>
@@ -76,13 +79,20 @@
 
 
 
-        <!--Script-->
+        <!--Script de hamburguesa-->
         <script>
             const botonMenu = document.getElementById('boton-menu');
             const menu = document.getElementById('menu');
 
             botonMenu.addEventListener('click', () => {
             menu.classList.toggle('mostrar');
+            });
+        </script>
+
+        <!--Mirar-->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                console.log("Página cargada. Listo para registrar usuarios.");
             });
         </script>
 

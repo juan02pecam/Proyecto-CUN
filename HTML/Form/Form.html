@@ -70,8 +70,13 @@
             }
 
             // Si todo es correcto, se puede enviar el formulario
-            alert("Formulario enviado correctamente.");
-            return true;
+            //alert("Formulario enviado correctamente.");
+            //return true;
+            
+            if (localStorage.getItem("loggedIn") !== "true") {
+                alert("Formulario enviado correctamente");
+                window.location.href= "HTML/Index/inicio.html";
+            }
         }
     </script>
 
