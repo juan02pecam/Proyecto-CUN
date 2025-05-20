@@ -45,10 +45,10 @@
                 <h2>Registro</h2>
                 <form onsubmit="RegisLogin(event)">
                     <label for="email">Correo electronico:</label><br>
-                    <input type="email" name="email" id="email" placeholder="Email@gmail.com"><br><br>
+                    <input type="email" name="email" id="emailRegis" placeholder="Email@gmail.com"><br><br>
 
                     <label for="password">Contraseña</label><br>
-                    <input type="password" name="password" id="password" placeholder="password"><br><br>
+                    <input type="password" name="password" id="passwordRegis" placeholder="password"><br><br>
 
                     <button type="submit">Registrarte</button>
 
@@ -125,7 +125,7 @@
             localStorage.setItem('password', password); // ¡No recomendado en producción!
 
             document.getElementById('mensaje').textContent = 'Usuario registrado correctamente.';
-            }
+        }
     </script>
 
 </body>
