@@ -5,6 +5,9 @@
 
 body{
     background-image: url(https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat; /*Para no repetir la imagen de fondo*/
+    background-attachment: fixed;/*Este elemento permite que la imagen se adapte y no se deforme*/
+    background-size: cover;/*Con este elemento la imegen cubre todo el elemento*/
     color: #dfdfe2; 
     font-size: 30px;
 

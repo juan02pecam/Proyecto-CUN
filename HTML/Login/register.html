@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+        <link rel="stylesheet" href="../../CSS/CSS Login/CssLogin.css">
+    </head>
+    <body>
+
+        <div class="hamburguesa" id="boton-menu"> <!--Este es div es para el menú hamburguesa-->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="menu">
+            <a href="../../HTML/Index/inicio.html">Inicio</a> <!--Lo que contiene el menú-->
+        </nav>
+
+        <p>Si no te has registrado lo podras hacer acá</p>
+
+        <div>
+            <fieldset>
+                    
+                <h2>Registro</h2>
+                <form onsubmit="RegisLogin(event)" action="register.php" method="post" id="formu">
+
+                    <label for="nombre">Nombre completo:</label><br>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required><br><br>
+
+                    <label for="email">Correo electronico:</label><br>
+                    <input type="email" name="email" id="email" placeholder="Email@gmail.com" required><br><br>
+
+                    <label for="password">Contraseña</label><br>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="password" required><br><br>
+
+                    <label for="telefono">Numero telefonico:</label><br>
+                    <input type="number" name="telefono" id="telefono" placeholder="Numero telefonico" required><br><br>
+
+                    <button type="submit" id="register">Registrarte</button>
+                </form>
+
+                <p id="mensaje"></p>
+                    
+            </fieldset>
+        </div>
+
+
+        <script>
+            const botonMenu = document.getElementById('boton-menu');
+            const menu = document.getElementById('menu');
+
+            botonMenu.addEventListener('click', () => {
+            menu.classList.toggle('mostrar');
+            });
+        </script>
+
+        <script>
+
+
+
+            function validateForm(){
+
+                const formu = document.getElementById("formu").value;
+
+                if(email === "" || contrasena === ""){
+                    alert("Todos los campos deben ser completados.");
+                    return false;
+                }else{
+
+                    alert("Registro exitoso.");
+
+                    document.getElementById('register').addEventListener('click', function(){
+                        window.location.href = "Login.html";
+                    });
+
+                    return true;
+                }
+
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!email.match(emailPattern)) {
+                    alert("Por favor, ingrese un correo electronico valido");
+                    return false;
+                }
+
+            };
+            
+            
+        </script>
+
+            
+    </body>
+</html>

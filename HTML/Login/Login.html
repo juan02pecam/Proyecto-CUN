@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesion P-O</title>
-    <link rel="stylesheet" href="/CSS/CSS Login/CssLogin.css">
+    <link rel="stylesheet" href="../../CSS/CSS Login/CssLogin.css">
 </head>
 <body>
 
@@ -15,7 +15,9 @@
     </div>
 
     <nav id="menu">
-        <a href="/HTML/Index/inicio.html">Inicio</a> <!--Lo que contiene el menú-->
+        <a href="../../HTML/Index/inicio.html">Inicio</a> <!--Lo que contiene el menú-->
+
+        <button type="submit"><a href="../../HTML/Login/register.html">Registrarse</a></button>
     </nav>
 
       
@@ -37,26 +39,6 @@
             </fieldset>
         </div>
 
-        <p>Si no te has registrado lo podras hacer aca</p>
-
-        <div>
-            <fieldset>
-                
-                <h2>Registro</h2>
-                <form onsubmit="RegisLogin(event)">
-                    <label for="email">Correo electronico:</label><br>
-                    <input type="email" name="email" id="emailRegis" placeholder="Email@gmail.com"><br><br>
-
-                    <label for="password">Contraseña</label><br>
-                    <input type="password" name="password" id="passwordRegis" placeholder="password"><br><br>
-
-                    <button type="submit">Registrarte</button>
-                </form>
-
-                <p id="mensaje"></p>
-                
-            </fieldset>
-        </div>
     </main>
 
     <footer>
@@ -66,9 +48,9 @@
         
         <span class="final">
                 
-            <a href="https://www.facebook.com/juandavid.penacamacho.1/"><img src="/Imagenes/facebook.png" alt="facebook" id="redes"></a>
-            <a href="https://wa.me/qr/TYHGCT6KPELQH1"><img src="/Imagenes/whatsapp.png" alt="whatsapp" id="redes"></a>
-            <a href="https://x.com/juandavidpecam5"><img src="/Imagenes/X.png" alt="X" id="redes"></a>
+            <a href="https://www.facebook.com/juandavid.penacamacho.1/"><img src="../../Imagenes/facebook.png" alt="facebook" id="redes"></a>
+            <a href="https://wa.me/qr/TYHGCT6KPELQH1"><img src="../../Imagenes/whatsapp.png" alt="whatsapp" id="redes"></a>
+            <a href="https://x.com/juandavidpecam5"><img src="../../Imagenes/X.png" alt="X" id="redes"></a>
             
         </span>
     </footer>
@@ -107,25 +89,6 @@
         botonMenu.addEventListener('click', () => {
         menu.classList.toggle('mostrar');
         });
-    </script>
-
-    <!--Local Storage-->
-
-    <script>
-        function RegisLogin(event) {
-                
-            event.preventDefault();
-            const email = document.getElementById('emailRegis').value;
-            const password = document.getElementById('passwordRegis').value;
-
-            // Guardar en Local Storage
-            localStorage.setItem('email', email);
-            localStorage.setItem('password', password); // ¡No recomendado en producción!
-
-            document.getElementById('mensaje').textContent = 'Usuario registrado correctamente.';
-        }
-
-        
     </script>
 
 </body>
