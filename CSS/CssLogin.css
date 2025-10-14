@@ -1,0 +1,112 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: linear-gradient(
+      to bottom,
+      #3a6186,
+      #89253e
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-size: 20px;
+  }
+
+  /* Contenedor del botón hamburguesa */
+  .hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 15px;
+  }
+
+  .hamburguesa span {
+    background: white;
+    height: 4px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+
+  /* Menú de navegación */
+  nav {
+    background: transparent;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+  }
+
+  /* Mostrar elementos en pantallas pequeñas */
+  @media (max-width: 2080px) {
+    .hamburguesa {
+      display: flex;
+    }
+
+    nav.mostrar {
+      display: flex;
+    }
+  }
+
+  /* En pantallas grandes, el menú está siempre visible */
+  @media (min-width: 2080px) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .hamburguesa {
+      display: none;
+    }
+  }
+/*--------------------------------------------------------*/
+
+#regist{
+  width: 100px;
+  height: 50px;
+}
+
+button a {
+  color: black;
+}
+
+main{
+  align-items: center;
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid white;
+}
+
+footer{
+  text-align: center;
+}
+
+.name, .description{
+  text-align: center;
+  display: block;
+}
+
+#redes{
+  position: relative;
+  width: 30px;
+  background-color: white;
+}
+
+button{
+  background: linear-gradient(
+    white 30%,  
+  #3a6186
+  );
+  height: 50px;
+  border-radius: 10px;
+}

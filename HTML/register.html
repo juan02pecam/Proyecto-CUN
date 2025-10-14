@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registro</title>
-        <link rel="stylesheet" href="../../CSS/CSS Login/CssLogin.css">
+        <link rel="stylesheet" href="../CSS/regist.css">
     </head>
     <body>
 
@@ -15,16 +15,16 @@
         </div>
 
         <nav id="menu">
-            <a href="../../HTML/Index/inicio.html">Inicio</a> <!--Lo que contiene el menú-->
+            <a href="inicio.html">Inicio</a> <!--Lo que contiene el menú-->
         </nav>
 
-        <p>Si no te has registrado lo podras hacer acá</p>
+        <p id="text">Si no te has registrado lo podras hacer acá</p>
 
-        <div>
+        <main>
             <fieldset>
                     
                 <h2>Registro</h2>
-                <form onsubmit="RegisLogin(event)" action="register.php" method="post" id="formu">
+                <form onsubmit="RegisLogin(event)" action="../HTML/PHP/register.php" method="post" id="formu">
 
                     <label for="nombre">Nombre completo:</label><br>
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required><br><br>
@@ -44,9 +44,23 @@
                 <p id="mensaje"></p>
                     
             </fieldset>
-        </div>
+        </main>
 
+        <footer>
+            <p class="name">Juan David Peña Camacho</p> <br>
 
+            <p class="description">Bases de datos y Enrutamiento de redes</p>
+            
+            <span class="final">
+                    
+                <a href="https://www.facebook.com/juandavid.penacamacho.1/"><img src="../Imagenes/facebook.png" alt="facebook" id="redes"></a>
+                <a href="https://wa.me/qr/TYHGCT6KPELQH1"><img src="../Imagenes/whatsapp.png" alt="whatsapp" id="redes"></a>
+                <a href="https://x.com/juandavidpecam5"><img src="../Imagenes/X.png" alt="X" id="redes"></a>
+                
+            </span>
+        </footer>
+
+        <!--Hamburguesa-->
         <script>
             const botonMenu = document.getElementById('boton-menu');
             const menu = document.getElementById('menu');
@@ -58,25 +72,7 @@
 
         <script>
 
-
-
             function validateForm(){
-
-                const formu = document.getElementById("formu").value;
-
-                if(email === "" || contrasena === ""){
-                    alert("Todos los campos deben ser completados.");
-                    return false;
-                }else{
-
-                    alert("Registro exitoso.");
-
-                    document.getElementById('register').addEventListener('click', function(){
-                        window.location.href = "Login.html";
-                    });
-
-                    return true;
-                }
 
                 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
                 if (!email.match(emailPattern)) {
@@ -85,10 +81,15 @@
                 }
 
             };
-            
-            
+             
         </script>
 
-            
     </body>
+
+    <style>
+        #text{
+  
+            text-align: center;
+        }
+    </style>
 </html>
