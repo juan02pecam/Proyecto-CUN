@@ -88,7 +88,7 @@ nav>ul>li>a{
 
 /*NAV*/
 
-#carrito{
+/*#carrito{
     height: 50px;
     width: 50px;
     position: absolute;
@@ -99,8 +99,8 @@ nav>ul>li>a{
         var(--button-desing2)
     );
     border-color: var(--button-desing);
-    border-radius: 10px; /*Redondea los bordes*/
-}
+    border-radius: 10px; /*Redondea los bordes
+}*/
 
 #inicio-sesion{
     height: 50px;
@@ -114,6 +114,7 @@ nav>ul>li>a{
     );
     border-color: var(--button-desing);
     border-radius: 10px;
+    color: black;
 }
 
 
@@ -136,7 +137,6 @@ li > a{
 
 nav>ul>li:hover{
     background-color: purple;
-    color: white;
     cursor: pointer;
 }
 
@@ -169,15 +169,6 @@ div > p{
 
 div{
     text-align: center;
-}
-
-#information{
-    color: white;
-    text-decoration: none;
-}
-
-#information:visited{
-    color: cyan;
 }
 
 #producs{
