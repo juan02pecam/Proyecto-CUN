@@ -1,0 +1,151 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyec-one</title>
+        <link rel="icon" href="../Imagenes/vision-por-computador.png" type="image/x-icon"> <!--Para asignar el icono que deseemos a la pagina-->
+        <link rel="stylesheet" href="../CSS/estilos.css"> <!--se cambio la ruta de acceso al CSS-->
+    </head>
+
+    <body>
+        
+        <div class="hamburguesa" id="boton-menu"> <!--Hamburguesa-->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="menu">
+            <fieldset>
+                <ul class="list-one">
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="#information">Acerca de nosotros</a></li>
+                    <li><a href="#products">Libros</a></li>
+                    <li><a href="#redes">Redes sociales</a></li>
+                </ul>
+                
+                <button id="inicio-sesion"><a href="Login.html"><p>iniciar sesion</p></a></button>
+
+                <button id="carrito"><a href="Cart.html"><img id="imag" src="../Imagenes/libro-abierto.png" alt="carrito de compras"></a></button>
+            </fieldset>
+        </nav>
+            
+            
+        <main>
+            <div id="information">
+                <fieldset>
+                    <h1>Bibliotech</h1>
+                    <p>
+                        El espacio en blanco es cualquier cadena de texto compuesta solo por espacios, tabulaciones o saltos de línea (para ser precisos, 
+                        secuencias CRLF, retornos de carro o avances de línea). Estos caracteres te permiten formatear tu código de una manera que lo hará fácilmente 
+                        legible por ti y otras personas. De hecho, gran parte de nuestro código fuente está lleno de estos caracteres de espacio en blanco, y solo 
+                        tendemos a deshacernos de ellos en un paso de compilación de producción para reducir el tamaño de descarga del código
+                    </p>
+                    <h3><a id="infor" href="https://clonesyperifericos.com/tienda/teclados-para-gaming/?srsltid=AfmBOoqIYmJvQGhQSo_KO2_hfdImmjjH5IR_Kp3_f1NEo9gNeMg4Y7pG">Informacion</a></h3><!--Esta es la informacion-->
+                </fieldset>
+            </div>
+            
+
+            <div id="products">
+                <h2>Libros</h2>
+                <p>Son productos con los que se cuentan</p>
+                <img id="producs" src="" alt="Imagen del producto1">
+                <img id="producs" src="" alt="Imagen del producto2">
+                <img id="producs" src="" alt="Imagen del producto3">
+            </div>
+
+            <div></div>
+            <div></div>
+
+
+        </main>
+        
+        <footer>
+        <!-- <p class="name">Juan David Peña Camacho</p> <br> -->
+
+        <p class="description">Desarrollo Web</p>
+        
+        <span class="final">
+                
+            <a href="https://www.facebook.com/juandavid.penacamacho.1/"><img src="../Imagenes/facebook.png" alt="facebook" id="redes"></a>
+            <a href="https://wa.me/qr/TYHGCT6KPELQH1"><img src="../Imagenes/whatsapp.png" alt="whatsapp" id="redes"></a>
+            <a href="https://x.com/juandavidpecam5"><img src="../Imagenes/X.png" alt="X" id="redes"></a>
+            
+        </span>
+    </footer>
+
+        <button  id="sug"><a href="Form.html">Sugerencias</a></button>
+
+
+
+        <!--Script de hamburguesa-->
+        <script>
+            const botonMenu = document.getElementById('boton-menu');
+            const menu = document.getElementById('menu');
+
+            botonMenu.addEventListener('click', () => {
+            menu.classList.toggle('mostrar');
+            });
+        </script>
+
+        <!--Mirar-->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                console.log("Página cargada. Listo para registrar usuarios.");
+            });
+        </script>
+
+    </body>
+
+</html>
+
+<!--Se estan agregando solo (..), si deseo cambiar la ruta solo lo elimino para que quede como este-->
+
+
+<!--El espacio en blanco es cualquier cadena de texto compuesta solo por espacios, tabulaciones o saltos de línea (para ser precisos, 
+secuencias CRLF, retornos de carro o avances de línea). Estos caracteres te permiten formatear tu código de una manera que lo hará fácilmente 
+legible por ti y otras personas. De hecho, gran parte de nuestro código fuente está lleno de estos caracteres de espacio en blanco, y solo 
+tendemos a deshacernos de ellos en un paso de compilación de producción para reducir el tamaño de descarga del código.-->
+const CarruselManual = () => {
+  const [indiceActual, setIndiceActual] = useState(0);
+
+  const imagenes = [
+    "https://via.placeholder.com/800x400?text=Imagen+1",
+    "https://via.placeholder.com/800x400?text=Imagen+2",
+    "https://via.placeholder.com/800x400?text=Imagen+3"
+  ];
+
+  const siguiente = () => {
+    // Si llega al final, vuelve al inicio (0)
+    setIndiceActual(indiceActual === imagenes.length - 1 ? 0 : indiceActual + 1);
+  };
+
+  const anterior = () => {
+    // Si está al inicio, va al final
+    setIndiceActual(indiceActual === 0 ? imagenes.length - 1 : indiceActual - 1);
+  };
+
+  return (
+    <div style={{ textAlign: 'center', position: 'relative', width: '800px' }}>
+      <button onClick={anterior} style={botonEstilo}>Prev</button>
+      
+      <img 
+        src={imagenes[indiceActual]} 
+        alt="Slider" 
+        style={{ width: '100%', borderRadius: '10px' }} 
+      />
+
+      <button onClick={siguiente} style={botonEstilo}>Next</button>
+      
+      <p>Imagen {indiceActual + 1} de {imagenes.length}</p>
+    </div>
+  );
+};
+
+const botonEstilo = {
+  padding: '10px',
+  margin: '10px',
+  cursor: 'pointer'
+};
