@@ -65,4 +65,221 @@ body {
     text-align: center;
   }
 
+/* ===== ESTILOS PARA PÁGINA DE LIBROS ===== */
+
+/* Contenedor de filtros */
+.contenedor-filtros {
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 1200px;
+}
+
+.contenedor-filtros h3 {
+  margin-top: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.botones-filtro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.boton-filtro {
+  padding: 10px 25px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.boton-filtro:hover {
+  background: white;
+  color: #3a6186;
+  transform: translateY(-2px);
+}
+
+.boton-filtro.activo {
+  background: white;
+  color: #3a6186;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Galería de libros */
+.galeria-libros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 30px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tarjeta-libro {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tarjeta-libro:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.imagen-contenedor {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #000;
+}
+
+.imagen-contenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-libro:hover .imagen-contenedor img {
+  transform: scale(1.05);
+}
+
+.etiqueta-categoria {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(58, 97, 134, 0.9);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.info-libro {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-libro h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: white;
+  min-height: 50px;
+}
+
+.precio {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4fc3f7;
+  margin: 10px 0;
+}
+
+.boton-agregar {
+  background: linear-gradient(135deg, #3a6186, #89253e);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.boton-agregar:hover {
+  background: linear-gradient(135deg, #89253e, #3a6186);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.boton-agregar:active {
+  transform: scale(0.95);
+}
+
+/* Contador de libros */
+.contador-libros {
+  color: white;
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.sin-resultados {
+  color: white;
+  font-size: 20px;
+  grid-column: 1 / -1;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .galeria-libros {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .botones-filtro {
+    gap: 10px;
+  }
+
+  .boton-filtro {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .imagen-contenedor {
+    height: 250px;
+  }
+
+  .info-libro {
+    padding: 15px;
+  }
+
+  .info-libro h3 {
+    font-size: 16px;
+  }
+
+  .precio {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria-libros {
+    grid-template-columns: 1fr;
+  }
+
+  .botones-filtro {
+    flex-direction: column;
+  }
+
+  .boton-filtro {
+    width: 100%;
+  }
+}
+
 

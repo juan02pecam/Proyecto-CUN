@@ -5,14 +5,38 @@ import '../styles/estilos.css';
 import facebook from '../images/facebook.png';
 import whatsapp from '../images/whatsapp.png';
 import twitter from '../images/X.png';
-import producs from '../images/Desarrollo-WEB/114.png';
+import img1 from '../images/Desarrollo-WEB/1 (1).avif';
+import img2 from '../images/Desarrollo-WEB/1 (2).avif';
+import img3 from '../images/Desarrollo-WEB/1 (3).avif';
+import img4 from '../images/Desarrollo-WEB/1 (4).avif';
+import img5 from '../images/Desarrollo-WEB/1 (5).avif';
+
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const imagenes = [img1, img2, img3, img4, img5];
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % imagenes.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? imagenes.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Cambiar imagen cada 5 segundos
+  React.useEffect(() => {
+    const interval = setInterval(nextImage, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
@@ -40,7 +64,32 @@ const Home = () => {
         <div id="products">
           <h2>Libros</h2>
           <p>Son productos con los que se cuentan</p>
-          <img className="producs" src={producs} alt="Imagen del producto1" />
+          
+          <div className="carrusel-contenedor">
+            <button className="boton-carrusel prev" onClick={prevImage}>❮</button>
+            
+            <div className="carrusel">
+              <img 
+                className="producs" 
+                src={imagenes[currentIndex]} 
+                alt={`Producto ${currentIndex + 1}`} 
+                key={currentIndex}
+              />
+            </div>
+            
+            <button className="boton-carrusel next" onClick={nextImage}>❯</button>
+          </div>
+
+          {/* Indicadores de página */}
+          <div className="carrusel-indicadores">
+            {imagenes.map((_, index) => (
+              <span 
+                key={index}
+                className={`punto ${index === currentIndex ? 'activo' : ''}`}
+                onClick={() => setCurrentIndex(index)}
+              ></span>
+            ))}
+          </div>
         </div>
 
         <div id="information">
