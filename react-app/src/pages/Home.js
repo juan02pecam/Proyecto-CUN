@@ -5,6 +5,7 @@ import '../styles/estilos.css';
 import facebook from '../images/facebook.png';
 import whatsapp from '../images/whatsapp.png';
 import twitter from '../images/X.png';
+import producs from '../images/Desarrollo-WEB/114.png';
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,9 +40,7 @@ const Home = () => {
         <div id="products">
           <h2>Libros</h2>
           <p>Son productos con los que se cuentan</p>
-          <img id="producs" src="" alt="Imagen del producto1" />
-          <img id="producs" src="" alt="Imagen del producto2" />
-          <img id="producs" src="" alt="Imagen del producto3" />
+          <img className="producs" src={producs} alt="Imagen del producto1" />
         </div>
 
         <div id="information">
