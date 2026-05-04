@@ -36,7 +36,7 @@ const Home = () => {
   React.useEffect(() => {
     const interval = setInterval(nextImage, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, );
 
   return (
     <div>
