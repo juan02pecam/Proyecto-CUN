@@ -40,6 +40,11 @@ body {
     padding: 10px 0;
   }
 
+  #registrar > a{
+    text-decoration: none;
+    color: black;
+  }
+
   /* Mostrar elementos en pantallas pequeñas */
   @media (max-width: 2080px) {
     .hamburguesa {

@@ -55,6 +55,7 @@ const Home = () => {
           </ul>
 
           <button id="inicio-sesion"><Link to="/login"><p>iniciar sesion</p></Link></button>
+          <button id="registrar"><Link to ="/Register"><p>Registrar</p></Link></button>
 
         </fieldset>
       </nav>

@@ -39,7 +39,7 @@ const Login = () => {
 
       <nav id="menu" className={menuOpen ? 'mostrar' : ''}>
         <Link to="/">Inicio</Link>
-        <button type="submit" id="regist"><Link to="/register">Registrarse</Link></button>
+        <button type="submit" id="registrar"><Link to="/register">Registrarse</Link></button>
       </nav>
 
       <main>

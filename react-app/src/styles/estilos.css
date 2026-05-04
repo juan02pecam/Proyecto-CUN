@@ -22,7 +22,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     margin: 0;
 }
 
-#inicio-sesion, a{
+#inicio-sesion > a{
+    text-decoration: none;
+    color: black;
+}
+
+#registrar > a{
     text-decoration: none;
     color: black;
 }
@@ -88,25 +93,25 @@ nav>ul>li>a{
 
 /*NAV*/
 
-/*#carrito{
+#registrar{
     height: 50px;
-    width: 50px;
+    width: 80px;
     position: absolute;
-    right: 1%;
+    right: 2%;
     top: 10px;
     background: linear-gradient(
         var(--button-desing),
         var(--button-desing2)
     );
     border-color: var(--button-desing);
-    border-radius: 10px; /*Redondea los bordes
-}*/
+    border-radius: 10px; /*Redondea los bordes*/
+}
 
 #inicio-sesion{
     height: 50px;
     width: 100px;
     position: absolute;
-    right: 5%;
+    right: 10%;
     top: 10px;
     background: linear-gradient(
         var(--button-desing),
@@ -114,7 +119,7 @@ nav>ul>li>a{
     );
     border-color: var(--button-desing);
     border-radius: 10px;
-    color: black;
+    
 }
 
 
