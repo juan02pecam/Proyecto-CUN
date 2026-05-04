@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/estilos.css';
-//import libroAbierto from '../images/libro-abierto.png';
+import '../styles/Styles.css';
 import facebook from '../images/facebook.png';
 import whatsapp from '../images/whatsapp.png';
 import twitter from '../images/X.png';
@@ -36,7 +35,7 @@ const Home = () => {
   React.useEffect(() => {
     const interval = setInterval(nextImage, 5000);
     return () => clearInterval(interval);
-  }, );
+  }, []);
 
   return (
     <div>
